@@ -42,9 +42,7 @@ public class IndexerModule implements Constants.NotePlayerConstants {
     /**
      * @return whether or not we "see" a note in the indexer (via beam-break)
      */
-    public boolean noteInIndexer() {
-        return !beamBreak.get();
-    }
+    public boolean noteInIndexer() {return !beamBreak.get();}
 
     public void setEnableHardLimit(boolean enableHardLimit) {
         if (limitSwitchState != enableHardLimit) {

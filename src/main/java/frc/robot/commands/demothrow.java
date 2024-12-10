@@ -1,14 +1,18 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.noteplayer.ArmModule;
+import frc.robot.subsystems.noteplayer.NotePlayerSubsystem;
 
 
 public class demothrow extends Command  {
+    private final NotePlayerSubsystem notePlayerSubsystem;
 
-    public demothrow() {
+    public demothrow(NotePlayerSubsystem notePlayerSubsystem) {
+        this.notePlayerSubsystem = notePlayerSubsystem;
         // each subsystem used by the command must be passed into the
         // addRequirements() method (which takes a vararg of Subsystem)
-        addRequirements();
+        addRequirements(this.notePlayerSubsystem);
     }
 
     /**
@@ -25,6 +29,8 @@ public class demothrow extends Command  {
      */
     @Override
     public void execute() {
+        notePlayerSubsystem.prepForAmp();
+        notePlayerSubsystem.reverseEject();
 
     }
 

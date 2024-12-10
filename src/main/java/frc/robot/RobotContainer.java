@@ -163,7 +163,7 @@ public class RobotContainer implements Constants.AutoConstants {
         intakeNote.whileTrue(Commands.waitUntil(RobotState.getInstance()::isNoteIsAvailable).andThen(notePlayerSubsystem.intakeNote()));
 
         driver.leftBumper().onTrue(notePlayerSubsystem.scoreNote());
-
+        driver.leftStick().onTrue(new demothrow(notePlayerSubsystem));
 
         driver.rightStick().toggleOnTrue(new demopassCommandGroup(swerveDrive, notePlayerSubsystem).repeatedly());
 

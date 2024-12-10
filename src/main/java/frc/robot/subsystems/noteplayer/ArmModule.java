@@ -17,7 +17,7 @@ import edu.wpi.first.wpilibj.shuffleboard.ShuffleboardContainer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Constants;
 
-public class ArmModule implements Constants.NotePlayerConstants {
+public class   ArmModule implements Constants.NotePlayerConstants {
 
     private final CANSparkMax leftMotor;
     private final CANSparkMax rightMotor;
